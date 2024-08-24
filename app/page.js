@@ -95,15 +95,27 @@ const tiers = [
 const faqs = [
   {
     id: 1,
-    question: "What's the best thing about Switzerland?",
+    question: 'How does FindFace work?',
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      'Upload a picture, and our AI scans the web for matching faces. We provide results with image sources and additional info.',
+  },
+  {
+    id: 2,
+    question: 'Is it legal to search for someone this way?',
+    answer:
+      'Yes, our service adheres to all privacy laws. We only provide publicly available information.',
+  },
+  {
+    id: 3,
+    question: 'What type of images yield the best results?',
+    answer:
+      'Clear, frontal photos with good lighting provide the most accurate results.',
   },
   // More questions...
 ];
 const footerNavigation = {
   solutions: [
-    { name: 'Hosting', href: '#' },
+    { name: 'Face Matching', href: '#' },
     { name: 'Data Services', href: '#' },
     { name: 'Uptime Monitoring', href: '#' },
     { name: 'Enterprise Services', href: '#' },
@@ -111,13 +123,13 @@ const footerNavigation = {
   support: [
     { name: 'Pricing', href: '#' },
     { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
+    { name: 'User Guide', href: '#' },
     { name: 'API Reference', href: '#' },
   ],
   company: [
     { name: 'About', href: '#' },
     { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
+    { name: 'Careers', href: '#' },
     { name: 'Press', href: '#' },
     { name: 'Partners', href: '#' },
   ],
@@ -419,11 +431,9 @@ export default function Example() {
               />
             </div>
             <div className="relative mx-auto max-w-2xl lg:mx-0">
-              <img
-                alt=""
-                src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
-                className="h-12 w-auto"
-              />
+              <div className="font-semibold h-12 w-auto text-lg text-white">
+                Company Name
+              </div>
               <figure>
                 <blockquote className="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">
                   <p>
