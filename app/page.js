@@ -367,12 +367,12 @@ export default function Example() {
               Why FaceFinder?
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              EThe most advanced way to track and identify people online.
+              The most advanced way to track and identify people online.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
+              From advanced AI matching to comprehensive privacy protection,
+              FaceFinder offers the most cutting-edge tools to help you track
+              and identify individuals online—safely and securely.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -432,7 +432,7 @@ export default function Example() {
             </div>
             <div className="relative mx-auto max-w-2xl lg:mx-0">
               <div className="font-semibold h-12 w-auto text-lg text-white">
-                Company Name
+                Trusted by Professionals Worldwide
               </div>
               <figure>
                 <blockquote className="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8">
@@ -458,13 +458,13 @@ export default function Example() {
                 Pricing
               </h2>
               <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Pricing plans for teams of&nbsp;all&nbsp;sizes
+                Flexible Pricing Plans for Every Need
               </p>
             </div>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
-              Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
-              quasi iusto modi velit ut non voluptas in. Explicabo id ut
-              laborum.
+              Whether you're a freelancer or a large enterprise, we have the
+              right plan to help you find the people you're looking for. Choose
+              the one that fits your needs.
             </p>
             <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               {tiers.map((tier, tierIdx) => (
