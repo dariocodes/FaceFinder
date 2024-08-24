@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { useState } from 'react';
+import { Dialog, DialogPanel } from '@headlessui/react';
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -9,85 +9,85 @@ import {
   FingerPrintIcon,
   LockClosedIcon,
   XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { CheckIcon } from "@heroicons/react/20/solid";
+} from '@heroicons/react/24/outline';
+import { CheckIcon } from '@heroicons/react/20/solid';
 
 const navigation = [
-  { name: "Start Searching", href: "#" },
-  { name: "How it Works", href: "#" },
-  { name: "Plans", href: "#" },
-  { name: "Help", href: "#" },
+  { name: 'Start Searching', href: '#' },
+  { name: 'How it Works', href: '#' },
+  { name: 'Plans', href: '#' },
+  { name: 'Help', href: '#' },
 ];
 const features = [
   {
-    name: "Photo Matching Accuracy",
+    name: 'Photo Matching Accuracy',
     description:
-      "Our AI-driven technology ensures high accuracy in matching photos across the web.",
+      'Our AI-driven technology ensures high accuracy in matching photos across the web.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: "Privacy Protection",
+    name: 'Privacy Protection',
     description:
-      "We prioritize your data security and privacy with top-tier encryption.",
+      'We prioritize your data security and privacy with top-tier encryption.',
     icon: LockClosedIcon,
   },
   {
-    name: "Real-Time Results",
+    name: 'Real-Time Results',
     description:
-      "Get results in real-time as we scan the internet for matching images",
+      'Get results in real-time as we scan the internet for matching images',
     icon: ArrowPathIcon,
   },
   {
-    name: "Detailed Insights",
+    name: 'Detailed Insights',
     description:
-      "We provide additional insights by analyzing the person’s digital footprint.",
+      'We provide additional insights by analyzing the person’s digital footprint.',
     icon: FingerPrintIcon,
   },
 ];
 const tiers = [
   {
-    name: "Freelancer",
-    id: "tier-freelancer",
-    href: "#",
-    priceMonthly: "$24",
-    description: "Basic image searches with limited access to extra insights.",
+    name: 'Freelancer',
+    id: 'tier-freelancer',
+    href: '#',
+    priceMonthly: '$24',
+    description: 'Basic image searches with limited access to extra insights.',
     features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
+      '5 products',
+      'Up to 1,000 subscribers',
+      'Basic analytics',
+      '48-hour support response time',
     ],
     mostPopular: false,
   },
   {
-    name: "Startup",
-    id: "tier-startup",
-    href: "#",
-    priceMonthly: "$32",
+    name: 'Startup',
+    id: 'tier-startup',
+    href: '#',
+    priceMonthly: '$32',
     description:
-      "Perfect for small teams needing detailed image analysis and more frequent searches.",
+      'Perfect for small teams needing detailed image analysis and more frequent searches.',
     features: [
-      "25 products",
-      "Up to 10,000 subscribers",
-      "Advanced analytics",
-      "24-hour support response time",
-      "Marketing automations",
+      '25 products',
+      'Up to 10,000 subscribers',
+      'Advanced analytics',
+      '24-hour support response time',
+      'Marketing automations',
     ],
     mostPopular: true,
   },
   {
-    name: "Enterprise",
-    id: "tier-enterprise",
-    href: "#",
-    priceMonthly: "$48",
+    name: 'Enterprise',
+    id: 'tier-enterprise',
+    href: '#',
+    priceMonthly: '$48',
     description:
-      "Comprehensive services, including dedicated support and unlimited searches.",
+      'Comprehensive services, including dedicated support and unlimited searches.',
     features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "1-hour, dedicated support response time",
-      "Marketing automations",
+      'Unlimited products',
+      'Unlimited subscribers',
+      'Advanced analytics',
+      '1-hour, dedicated support response time',
+      'Marketing automations',
     ],
     mostPopular: false,
   },
@@ -103,33 +103,33 @@ const faqs = [
 ];
 const footerNavigation = {
   solutions: [
-    { name: "Hosting", href: "#" },
-    { name: "Data Services", href: "#" },
-    { name: "Uptime Monitoring", href: "#" },
-    { name: "Enterprise Services", href: "#" },
+    { name: 'Hosting', href: '#' },
+    { name: 'Data Services', href: '#' },
+    { name: 'Uptime Monitoring', href: '#' },
+    { name: 'Enterprise Services', href: '#' },
   ],
   support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Reference", href: "#" },
+    { name: 'Pricing', href: '#' },
+    { name: 'Documentation', href: '#' },
+    { name: 'Guides', href: '#' },
+    { name: 'API Reference', href: '#' },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: 'About', href: '#' },
+    { name: 'Blog', href: '#' },
+    { name: 'Jobs', href: '#' },
+    { name: 'Press', href: '#' },
+    { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: "Claim", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: 'Claim', href: '#' },
+    { name: 'Privacy', href: '#' },
+    { name: 'Terms', href: '#' },
   ],
 };
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Example() {
@@ -237,7 +237,7 @@ export default function Example() {
             <div
               style={{
                 clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
               }}
               className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             />
@@ -288,7 +288,7 @@ export default function Example() {
             <div
               style={{
                 clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
               }}
               className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
             />
@@ -401,7 +401,7 @@ export default function Example() {
               <div
                 style={{
                   clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
                 }}
                 className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-[0.45]"
               />
@@ -413,7 +413,7 @@ export default function Example() {
               <div
                 style={{
                   clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+                    'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
                 }}
                 className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
               />
@@ -461,10 +461,10 @@ export default function Example() {
                 <div
                   key={tier.id}
                   className={classNames(
-                    tier.mostPopular ? "lg:z-10 lg:rounded-b-none" : "lg:mt-8",
-                    tierIdx === 0 ? "lg:rounded-r-none" : "",
-                    tierIdx === tiers.length - 1 ? "lg:rounded-l-none" : "",
-                    "flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10"
+                    tier.mostPopular ? 'lg:z-10 lg:rounded-b-none' : 'lg:mt-8',
+                    tierIdx === 0 ? 'lg:rounded-r-none' : '',
+                    tierIdx === tiers.length - 1 ? 'lg:rounded-l-none' : '',
+                    'flex flex-col justify-between rounded-3xl bg-white p-8 ring-1 ring-gray-200 xl:p-10'
                   )}
                 >
                   <div>
@@ -473,9 +473,9 @@ export default function Example() {
                         id={tier.id}
                         className={classNames(
                           tier.mostPopular
-                            ? "text-indigo-600"
-                            : "text-gray-900",
-                          "text-lg font-semibold leading-8"
+                            ? 'text-indigo-600'
+                            : 'text-gray-900',
+                          'text-lg font-semibold leading-8'
                         )}
                       >
                         {tier.name}
@@ -517,9 +517,9 @@ export default function Example() {
                     aria-describedby={tier.id}
                     className={classNames(
                       tier.mostPopular
-                        ? "bg-indigo-600 text-white shadow-sm hover:bg-indigo-500"
-                        : "text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300",
-                      "mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        ? 'bg-indigo-600 text-white shadow-sm hover:bg-indigo-500'
+                        : 'text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300',
+                      'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                     )}
                   >
                     Buy plan
